@@ -14,6 +14,10 @@ os.environ['AWS_SECRET_ACCESS_KEY']=config['KEYS']['AWS_SECRET_ACCESS_KEY']
 
 
 def create_spark_session():
+    """
+    Create Spark session
+    """
+    
     spark = SparkSession \
         .builder \
         .appName("Data Lake with Spark SQL") \
@@ -23,7 +27,10 @@ def create_spark_session():
 
 
 def process_song_data(spark, input_data, output_data):
-        
+    """
+    Process song data from s3 json file to parquet files table songs and artist to s3
+    """
+    
     # get filepath to song data file
     song_data = "s3a://udacity-dend/song_data/*/*/*/*.json"
     
@@ -45,7 +52,10 @@ def process_song_data(spark, input_data, output_data):
 
 
 def process_log_data(spark, input_data, output_data):
-
+    """
+    Process log data from s3 json file to parquet files table user, time and songplays to s3
+    """
+    
     # get filepath to log data file
     log_data = "s3a://udacity-dend/log-data/*/*/*.json"
 

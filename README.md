@@ -1,8 +1,11 @@
 # Base analysis
 
 ```sh
-We have two big data file - song_data with songs and artist data, and log_data with streaming data of users events.
-Our goal is create one fact table songsplays with time data and four dimensions table with other data with Spark (users, songs, artists, time).
+We have two big data file - song_data with songs and artist data, 
+and log_data with streaming data of users events.
+
+Our goal is create one fact table songsplays with time data and 
+four dimensions table with other data with Spark (users, songs, artists, time).
 ```
 
 # 1. Configure dl.cfg
